@@ -168,3 +168,14 @@ resource "aws_security_group" "example" {
     }
   }
 }
+
+
+Data Source
+Terraform creates new resources(ec2, security group, vpc)
+But sometimes you already have resources in AWS(maybe created manually or by another team)
+Instead of creating again, you can use data sources to fetch information about exiting resources
+
+resource - creates something new
+data - reads information about something that already exists
+
+Instead of hard coding values we can directly fetch it
