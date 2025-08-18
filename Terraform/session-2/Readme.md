@@ -179,3 +179,7 @@ resource - creates something new
 data - reads information about something that already exists
 
 Instead of hard coding values we can directly fetch it
+
+output only works for resources Terraform itself created in the same project.
+
+data source works for external resources (outside Terraform, created manually, or created in another Terraform project).
