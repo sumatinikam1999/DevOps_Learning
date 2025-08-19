@@ -51,3 +51,14 @@ whenever you need you can always call modules
 
 
 keep  code it in one folder and call from another repo
+
+
+# For DEV
+terraform init -backend-config=DEV/backend.tfvars
+terraform plan -var-file=DEV/dev.tfvars
+terraform apply -var-file=DEV/dev.tfvars
+
+# For PROD
+terraform init -backend-config=PROD/backend.tfvars
+terraform plan -var-file=PROD/prod.tfvars
+terraform apply -var-file=PROD/prod.tfvars
