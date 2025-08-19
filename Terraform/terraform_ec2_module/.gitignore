@@ -56,22 +56,3 @@ credentials.json
 # Any test logs
 **/**.log
 
-*.rst
-*.so*
-*.json
-*.yml
-*.index
-*.txt
-*.zip
-*.css
-*.sty
-*.odt
-*.pem
-__base__
-*.js
-METADATA
-*.tex
-*.html
-*.gz
-*aws
-
