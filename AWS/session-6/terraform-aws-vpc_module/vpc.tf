@@ -13,4 +13,11 @@ module "vpc" {
   
   database_subnet_cidr_block = var.database_subnet_cidr_block
   database_subnet_tags = var.database_subnet_tags
+
+  public_route_table_tags = var.public_route_table_tags
+ 
+  private_route_table_tags = var.private_route_table_tags
+
+  database_route_table_tags = var.database_route_table_tags
+
 }

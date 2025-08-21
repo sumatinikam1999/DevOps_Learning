@@ -58,3 +58,15 @@ variable "database_subnet_cidr_block" {
 variable "database_subnet_tags" {
 
 }
+
+variable "public_route_table_tags" {
+  default = {}
+}
+
+variable "private_route_table_tags" {
+
+}
+
+variable "database_route_table_tags" {
+
+}

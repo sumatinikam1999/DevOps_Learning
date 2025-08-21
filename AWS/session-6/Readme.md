@@ -64,3 +64,7 @@ modules
 
 2. use open source modules
 
+
+merge
+length
+element

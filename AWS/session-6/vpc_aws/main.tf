@@ -59,3 +59,55 @@ resource "aws_subnet" "database_subnet1" {
     }
   )
 }
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.main.id
+    tags = merge(
+    var.common_tags,
+    var.public_route_table_tags
+  )
+}
+
+resource "aws_route" "public" {
+  route_table_id = aws_route_table.public.id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id = aws_internet_gateway.ig.id
+  depends_on = [ aws_route_table.public ]
+}
+
+# public-route-table -> public-1a-subnet
+# public-route-table -> public-1b-subnet
+resource "aws_route_table_association" "public" {
+  count = length(var.public_subnet_cidr_block)
+  subnet_id = element(aws_subnet.public_subnet1[*].id, count.index)
+  route_table_id = aws_route_table.public.id
+}
+
+
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.main.id
+    tags = merge(
+    var.common_tags,
+    var.private_route_table_tags
+  )
+}
+
+resource "aws_route_table_association" "private" {
+  count = length(var.private_subnet_cidr_block)
+  subnet_id = element(aws_subnet.private_subnet1[*].id, count.index)
+  route_table_id = aws_route_table.private.id
+}
+
+resource "aws_route_table" "database" {
+  vpc_id = aws_vpc.main.id
+    tags = merge(
+    var.common_tags,
+    var.database_route_table_tags
+  )
+}
+
+resource "aws_route_table_association" "database" {
+  count = length(var.database_subnet_cidr_block)
+  subnet_id = element(aws_subnet.private_subnet1[*].id, count.index)
+  route_table_id = aws_route_table.database.id
+}
