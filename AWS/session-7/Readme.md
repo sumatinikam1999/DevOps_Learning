@@ -60,3 +60,4 @@ NAT Gateway
 we need to add that as route in private and database route tables
 
 
+terraform init -upgrade - when module updated you need to run this
