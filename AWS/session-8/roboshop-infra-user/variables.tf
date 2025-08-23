@@ -97,3 +97,22 @@ variable "sg_tags" {
   type    = map(string)
   default = {}
 }
+
+variable "instances" {
+  default = {
+    Mongodb = "t3.medium"
+    Mysql = "t3.medium"
+    Redis = "t2.micro"
+    User = "t2.micro"
+    Cart = "t2.micro"
+   Catalogue = "t2.micro"
+    Shipping = "t2.micro"
+    Web = "t2.micro"
+    Payment = "t2.micro"
+    Rabbitmq = "t2.micro"
+  }
+}
+
+variable "zone_name" {
+  default = "devopslearner.space"
+}
