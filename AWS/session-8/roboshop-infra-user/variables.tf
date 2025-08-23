@@ -34,14 +34,8 @@ variable "database_subnet_cidr_block" {
 
 # Security Group Rules
 variable "sg_ingress_rules" {
-  type = list(object({
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    description = string
-    cidr_blocks = list(string)
-  }))
-
+  type = list
+  
   default = [
     {
       from_port   = 0
