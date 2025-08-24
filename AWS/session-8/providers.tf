@@ -2,11 +2,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 6.0"
+      version = ">= 4.0.0"
     }
   }
   backend "s3" {
-    bucket         = "awsbucket-terraform-account"
+    bucket         = "awsbucket-terraform-account-elk"
     key            = "module"
     region         = "us-east-1"
     dynamodb_table = "dynamodb-lock"

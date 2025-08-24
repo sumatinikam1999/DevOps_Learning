@@ -22,6 +22,7 @@ module "ec2_ansible" {
   #subnet_id = local.database_subnet_ids[0] #public subnet in 1a region
   subnet_id = local.public_subnet_ids[0] 
   user_data = file("roboshop-ansible.sh")
+  name = "Ansible"
   tags = merge(
     {
     Name = "Ansible"

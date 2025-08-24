@@ -191,10 +191,49 @@ output {
 
 }
 
-/var/log/logstash
+/var/log/logstash/logstash-plain.log
 
 https://grokdebugger.com/
 https://github.com/cjslack/grok-debugger/blob/master/public/patterns/grok-patterns
+
+
+##troubleshooting
+if you want to do changes in filebeat side then
+stop filebeat
+start filebeat
+
+if you want to do changes in logstash side then
+first stop filebeat and later stop logstash
+do changes in logstash
+start filebeat
+
+To create visualization
+go to menu - visualize library - create visualization - Lens - we have 4 first take latency
+click on horizontal axis(x-axis) - select field - x axis is always timestamp - every one minute - display name - now
+y axis(vertical axis) - here want latency - in one min we want to have avg duration - select field - duration
+- display name - latency - close - save - Latency - add to dashboard - new - save - go to
+dashboard - click on save - roboshop dashboard - 
+
+latency
+traffic
+errors
+saturation
+
+now add for traffic
+visualize library - select area(diff types of charts we can select) - x axis (always timestamp) -
+y axis - traffic means count of records - select count - now add to existing dashboard
+
+now add for errors
+visualize library - add area chart - x axis - time - y axis - errors - count - select field(advanced options)
+- filter by(http_status > 399) - save -  now add to existing dashboard
+
+on any public server we can do it to generate load
+run labauto
+roboshop load gen(49)
+
+now add for saturation(ram, cpu, disk)
+prometheus
+
 
 
 # cd /usr/share/elasticsearch
