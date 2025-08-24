@@ -3,6 +3,57 @@ Terraform
 2. use open source module
 
 
+aws parameters store
 to store parameters in aws we have paramerter store to store configuration(here storing vpc id)
 centrally store configs so any other resource in aws reuse
 /project-name/env/vpc_id
+
+if we are declaring variables in terraform-aws-security-group/variables.tf then we need to use it in roboshop-infra-user/sg_module.tf
+
+
+
+Terraform
+------------
+1. develop your own module
+2. use open source module
+
+Module development
+
+SG
+---------
+users can pass the inputs we need to create SG
+inbound
+
+1 project --> 1ENV --> 1 VPC
+
+parameter store
+-----------------
+centrally store the configuration so that any other resource in AWS can refer and reuse
+
+key --> value
+
+open source modules
+---------------------
+
+ansible instance through terraform I will write user_data
+
+what is user_data?
+
+creating instance, on successful start of the instance we want to few things, that you can provide through shell script
+
+install ansible
+connect to our roboshop instances
+run the playbooks
+
+Linux Admin
+Manual configuration
+Shell automation
+Ansible automation
+Terraform to create infra automation and ansible to create configuration
+
+Monitoring
+------------------
+fast responding
+handle more traffic
+check for errors --> 500 errors, you should monitoring
+calculate how many users our application can serve

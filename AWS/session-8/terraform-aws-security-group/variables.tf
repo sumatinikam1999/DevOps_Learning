@@ -1,4 +1,5 @@
 variable "sg_name" {
+  #blank means mandatory
 }
 
 variable "sg_description" {
@@ -10,7 +11,7 @@ variable "vpc_id" {
 }
 
 variable "sg_ingress_rules" {
-  default = []
+  default = [] #optional
 }
 
 variable "common_tags" {
