@@ -29,6 +29,11 @@ logstash
 filtering the data coming from agents
 
 we can't store data/logs longtime in server
+so we can use elasticsearch
+
+filebeat agents access log files and ship data to elasticsearch
+
+tail -100f /var/log/nginx/access.log
 
 Monitoring
 ---------------
