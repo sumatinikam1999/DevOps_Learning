@@ -182,7 +182,7 @@ filter {
       "message" => "%{IP:client} \[%{HTTPDATE:timestamp}\] \"%{WORD:method} %{URIPATH:request} HTTP/%{NUMBER:http_version}\" %{NUMBER:status} %{NUMBER:request_time}"
     }
   }
-  
+
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
@@ -191,7 +191,7 @@ output {
 
 }
 
-
+/var/log/logstash
 
 https://grokdebugger.com/
 https://github.com/cjslack/grok-debugger/blob/master/public/patterns/grok-patterns
