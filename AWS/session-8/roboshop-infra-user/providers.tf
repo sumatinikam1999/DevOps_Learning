@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "awsbucket-terraform-new"
+    bucket         = "awsbucket-terraform-account"
     key            = "module"
     region         = "us-east-1"
     dynamodb_table = "dynamodb-lock"

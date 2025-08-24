@@ -10,6 +10,10 @@ centrally store configs so any other resource in aws reuse
 
 if we are declaring variables in terraform-aws-security-group/variables.tf then we need to use it in roboshop-infra-user/sg_module.tf
 
+Monitoring
+------------
+
+
 
 
 Terraform
