@@ -2,12 +2,12 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.15.0"
+      version = "~> 6.0"
     }
   }
 
   backend "s3" {
-    bucket   = "roboshop-remote-state"
+    bucket   = "awsbucket-terraform-account-elk"
     key = "vpn"
     region = "us-east-1"
     dynamodb_table = "roboshop-locking"
