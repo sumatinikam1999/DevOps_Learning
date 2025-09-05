@@ -1,5 +1,5 @@
 module "minikube" {
-  source = "github.com/scholzj/terraform-aws-minikube"
+  source = "github.com/sumatinikam1999/terraform-aws-minikube"
 
   aws_region    = "us-east-1"
   cluster_name  = "my-minikube"
@@ -15,9 +15,9 @@ module "minikube" {
   }
 
   addons = [
-      "https://raw.githubusercontent.com/scholzj/terraform-aws-minikube/master/addons/kubernetes-dashabord/init.sh",
-      "https://raw.githubusercontent.com/scholzj/terraform-aws-minikube/master/addons/kubernetes-metrics-server/init.sh",
-      "https://raw.githubusercontent.com/scholzj/terraform-aws-minikube/master/addons/external-dns/init.sh",
-      "https://raw.githubusercontent.com/scholzj/terraform-aws-minikube/master/addons/kubernetes-nginx-ingress/init.sh"
+      "https://raw.githubusercontent.com/sumatinikam1999/terraform-aws-minikube/master/addons/kubernetes-dashabord/init.sh",
+      "https://raw.githubusercontent.com/sumatinikam1999/terraform-aws-minikube/master/addons/kubernetes-metrics-server/init.sh",
+      "https://raw.githubusercontent.com/sumatinikam1999/terraform-aws-minikube/master/addons/external-dns/init.sh",
+      "https://raw.githubusercontent.com/sumatinikam1999/terraform-aws-minikube/master/addons/kubernetes-nginx-ingress/init.sh"
   ]
 }
