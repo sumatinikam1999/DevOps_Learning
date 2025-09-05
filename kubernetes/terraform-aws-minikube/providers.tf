@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "awsbucket-terraform-account-elk"
+    bucket         = "terraform-mini"
     key            = "module"
     region         = "us-east-1"
-    dynamodb_table = "dynamodb-lock"
+    dynamodb_table = "Dynamodb"
   }
 }
 

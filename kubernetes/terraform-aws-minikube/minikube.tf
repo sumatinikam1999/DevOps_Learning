@@ -3,11 +3,11 @@ module "minikube" {
 
   aws_region    = "us-east-1"
   cluster_name  = "my-minikube"
-  aws_instance_type = "t2.medium"
-  ssh_public_key = "~/.ssh/id_rsa.pub"
-  aws_subnet_id = "subnet-8a3517f8"
-  ami_image_id = "ami-b81dbfc5"
-  hosted_zone = "my-domain.com"
+  aws_instance_type = "t3.medium"
+  # ~ means home dir
+  ssh_public_key = "~/terraform"
+  aws_subnet_id = "subnet-0ed8e99a4ea89b2d2" #any-public-subnet
+  hosted_zone = "devopslearner.space"
   hosted_zone_private = false
 
   tags = {
