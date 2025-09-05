@@ -5,8 +5,8 @@ module "minikube" {
   cluster_name  = "my-minikube"
   aws_instance_type = "t3.medium"
   # ~ means home dir
-  ssh_public_key = "~/terraform"
-  aws_subnet_id = "subnet-0ed8e99a4ea89b2d2" #any-public-subnet
+  ssh_public_key = "ssh-keys/id_rsa.pub"
+  aws_subnet_id = "subnet-0201394cf86be363d" #any-public-subnet
   hosted_zone = "devopslearner.space"
   hosted_zone_private = false
 
