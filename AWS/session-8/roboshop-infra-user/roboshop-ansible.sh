@@ -1,3 +1,7 @@
 #!/bin/bash
 yum install ansible -y
-touch /tmp/test-script.sh
+#cd /tmp
+touch /tmp/test-script.sh\
+#git clone playbook
+#give path
+#give command to run playbook
